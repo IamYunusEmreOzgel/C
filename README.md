@@ -1,0 +1,2 @@
+# Denklem-zme
+01-
