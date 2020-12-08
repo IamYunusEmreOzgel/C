@@ -11,7 +11,7 @@ st:
   Sum=0;
   printf("Please Enter number to Check for Armstrong \n");
   scanf("%d", &Number);
-  if (Number==0)
+  if (Number==-1)
     goto end;
 
   Temp = Number;
@@ -30,8 +30,9 @@ st:
    }
 
   printf("Sum of entered number is = %d\n", Sum);
-
-  if ( Number == Sum )
+  if(Number == 0 || Number == 1)
+     printf("YES , %d is Armstrong Number.\n", Number);
+  if ( Number == Sum && Number > 10)
       printf("YES , %d is Armstrong Number.\n", Number);
   else
       printf("NO , %d is not a Armstrong Number.\n", Number);
