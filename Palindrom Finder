@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char s[100];
+    char *First,*End;
+    int Cont;
+
+    printf("Please enter a sentence\n");
+    gets(s);
+
+    for(End=s;*End;End++){
+    End--
+    }
+  
+    Cont=1;
+    for(First=s;Cont && First<End;First++,End--)
+    {
+        if(*First != *End)
+        {
+            Cont=0;
+        }
+    }
+
+    if(Cont)
+    {
+        printf("%s is a palindrom",s);
+    }
+    else
+    {
+        printf("%s is not a palindrom",s);
+    }
+    return 0;
+}
