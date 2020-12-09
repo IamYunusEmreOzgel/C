@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define N 10
+
+int main()
+{
+    int i,min,max;
+    int *Arr;
+    int Values[N];
+    printf("Enter %d value\n",N);
+    for(Arr=Values;Arr<Values+N;Arr++)
+    {
+        scanf("%d",Arr);
+    }
+
+max=min=Values[0];
+    for(Arr=Values+1;Arr<Values+N;Arr++)
+    {
+        if(*Arr>max)
+        {
+            max=*Arr;
+        }
+        if(*Arr<min)
+        {
+            min=*Arr;
+        }
+    }
+    printf("Max value is %d\n",max);
+    printf("Min value is : %d\n",min);
+
+    return 0;
+}
