@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+long Faktoriyel(int sayi1)
+{
+   int i;
+   long Fakt = 1;
+
+   for (i = 1; i <= sayi1; i++)
+         Fakt = Fakt * i;
+
+   return Fakt;
+}
+
+
+int main()
+{
+   int i,satir,j;
+
+   printf("Kac satirdan olusan ucgen istiyorsunuz?\n");
+   scanf("%d", &satir);
+
+   for (i=0;i < satir;i++)
+   {
+      for (j=0;j<=(satir- i-2);j++)
+      {
+      	printf(" ");
+	  }
+
+      for (j = 0; j <= i; j++)
+      {
+      	printf("%2d ", Faktoriyel(i) / (Faktoriyel(j) * Faktoriyel(i-j)));
+	  }
+
+      printf("\n");
+   }
+
+   return 0;
+}
+
