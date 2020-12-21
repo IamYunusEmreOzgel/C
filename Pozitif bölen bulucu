@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int alinanSayi,bol,bolum;
+    printf("Pozitif bölenlerini bulmak istediginiz bir sayi giriniz...");
+    scanf("%d",&alinanSayi);
+
+
+   for(bol = 1; bol<=alinanSayi;bol++){
+    		bolum=alinanSayi % bol;
+    		if(bolum==0){
+    			printf(" %d \n",bol);
+
+    		}
+
+   }
+    return 0;
+}
