@@ -1,0 +1,40 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a;
+    int *pa;
+    printf("Bir Deger Giriniz ---> ");
+    scanf("%d",&a);
+
+    pa=&a;
+    fonk1(&pa);
+    fonk2(a);
+
+    return 0;
+}
+
+void fonk1(int *a){
+    int *c;
+     c=*a;
+printf("pointer adresi = %x \n",&a);
+printf("pointer tarafindan isaret edilen degiskenin adresi = %x \n",a);
+printf("pointer tarafindan isaret edilen degiskenin degeri  = %d \n\n\n ",*c);
+
+}
+
+
+void fonk2(int a){
+    int *z,*pz;
+
+    z=&a;
+    pz=&z;
+
+printf("Degiskenin adresi=%x \n",&a);
+printf("pointer adresi = %x \n",pz);
+printf("pointer tarafindan isaret edilen degisken degeri = %d \n",*z);
+
+
+}
