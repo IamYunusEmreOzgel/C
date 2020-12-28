@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+/*
+        FILE *dosya;
+        char karakter;
+        dosya = fopen("DOSYANIN YOLUNU YAZ","r");  //r kullanarak okuma yapacağımızı gösterdik.
+
+        karakter = fgetc(dosya);
+        //EOF karakterlerin bittiğini gösterir end of the file.
+    while(karakter!=EOF)
+        {       DOSYADAN KARAKTER KARAKTER OKUMA YAPIP KONSOLA YAZDIRMAK.
+        printf("%c",karakter);
+        karakter=fgetc(dosya);
+        }
+*/
+
+/*
+        char karakter[30];
+        FILE *dosya;
+        dosya = fopen("DOSYANİN YOLUNU YAZIN","r");     DOSYADAN STRİNG STİRNG OKUMA YAPIP KONSOLA YAZDIRMAK
+        fgets(karakter,50,dosya);
+        puts(karakter);
+        fclose(dosya);
+*/
+
+/*
+        FILE *dosya;
+        int i=0;
+        char kelimeler[50][50];
+        dosya = fopen("DOSYANIN YOLUNU YAZ","r");      DOSYADAN KELİME BAZINDA OKUMA YAPMAK.
+
+    while (!feof(dosya))
+        {
+        fscanf(dosya,"%s",&kelimeler[i]);
+        fprintf("%s \n",kelimeler[i]);
+        i++;
+        }
+*/
+
+    return 0;
+}
