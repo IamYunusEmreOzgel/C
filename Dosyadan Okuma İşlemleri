@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+   FILE *dosyaninAdresi;
+
+   dosyaninAdresi = fopen("C:\\Users\\yeozg\\OneDrive\\Masaüstü\\Yeni klasör\\yazilar.txt","w");    //Önceden yazılanı her seferinde siler
+
+   /*dosyaninAdresi = fopen("C:\\Users\\yeozg\\OneDrive\\Masaüstü\\Yeni klasör\\yazilar.txt","a");  //önceden yazılanı silmeden üstüne yazar
+
+   fputc('c',dosyaninAdresi);           // Write modunda Harf yazdırır
+   fprintf(dosyaninAdresi,"\n");        //bir satır aşağıya geçmek için kullanıyoruz.
+   fputs("Yunus Emre",dosyaninAdresi); //append modunda çalışır
+   fclose(dosyaninAdresi); //dosyayı kapattık */
+
+
+    //Dosyaya konsola girilen metni yazdırmak.
+/*
+   char isim[10];
+   printf("lutfen bir isim giriniz \n");                 //Konsola yazdırdık ve gets ile konsoldan okuduk.
+   gets(isim);
+   fprintf(dosyaninAdresi,"Benim adim: %s",isim);        //Fprintf fonksiyonu ile dosyamıza stringimizi yazdırdık.
+*/
+
+
+    //dosyaya 2 sayının toplamını yazdırmak.
+/*
+    int say1,say2;
+    printf("lutfen 2 sayi giriniz");
+    scanf("%d %d",&say1,&say2);
+    int toplam;
+    toplam=say1+say2;
+    fprintf(dosyaninAdresi,"Kullanıcının girdigi sayilar %d , %d \n",say1,say2);
+    fprintf(dosyaninAdresi,"girilen sayilarin toplami: %d",toplam);
+*/
+
+
+/*
+    char ad[20],soyad[20];
+    float maas;
+    int yas;
+    printf("calisanin adi ve soyadini giriniz");
+    gets(ad);
+    gets(soyad);
+    printf("Calisanın maasini giriniz");
+    scanf("%f",&maas);
+    printf("Calisanın yasini giriniz");
+    scanf("%d",&yas);
+
+    fprintf("Calisan bilgileri");
+    fprintf(dosyaninAdresi,"Ad %s \n soyadi %s \n maasi %.4f \n yasi  %d",ad,soyad,maas,yas);
+
+
+    fclose(dosyaninAdresi);
+*/
+
+
+
+    return 0;
+}
