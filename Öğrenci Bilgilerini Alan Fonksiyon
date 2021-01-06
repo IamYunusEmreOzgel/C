@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct ogrenci{
+char adsoyad[30];
+char ders[20];
+int vize1,vize2,finalnotu;
+};
+
+
+int main()
+{
+    FILE *DOSYA;
+    int N,i;
+    float ortalama;
+
+    printf("kac tane ogrenci var ?");
+    scanf("%d",&N);
+
+    struct ogrenci ogr[N];
+
+    DOSYA=fopen("C:\\Users\\yeozg\\OneDrive\\Masaüstü\\bilgi.txt","a"); //Bu alana kendi dosya adresinizi giriniz.
+
+    if(DOSYA==NULL){
+        printf("dosya olustulamadi");
+    }
+    else
+        {
+
+      for(i=0;i<N;i++)
+ {
+  fflush(stdin);
+  printf("Adi Soyadi:");
+  gets(ogr[i].adsoyad);
+  printf("Ders Adi:");
+  gets(ogr[i].ders);
+  printf("Vize 1 Notu:");
+  scanf("%d",&ogr[i].vize1);
+  printf("Vize 2 Notu:");
+  scanf("%d",&ogr[i].vize2);
+  printf("Final Notu:");
+  scanf("%d",&ogr[i].finalnotu);
+  ortalama = (float)ogr[i].vize1*0.2+(float)ogr[i].vize2*0.2+(float)ogr[i].finalnotu*0.6;
+
+  fprintf(DOSYA,"%s\t %s\t %d\t %d\t %d\t %.2f\n",ogr[i].adsoyad,ogr[i].ders,ogr[i].vize1,ogr[i].vize2,ogr[i].finalnotu,ortalama);
+
+ };
+printf("dosyaya basariyla kaydedildi");
+fclose(DOSYA);
+
+
+    }
+   fclose(DOSYA);
+
+    return 0;
+}
