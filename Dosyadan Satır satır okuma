@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *DOSYA;
+    char satir[100],*karakter;
+
+    DOSYA=fopen("C:\\Users\\yeozg\\OneDrive\\Masaüstü\\bilgi.txt","r");
+
+    if(DOSYA==NULL){
+        printf("dosya olustulamadi");
+    }
+    else{
+            do{
+    karakter=fgets(satir,100,DOSYA);
+       if(karakter != NULL){
+        printf("%s",satir);
+       }
+            }while(karakter !=NULL);
+              fclose(DOSYA);
+
+    }
+
+    return 0;
+}
