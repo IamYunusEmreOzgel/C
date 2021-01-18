@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+
+    int *alan1 = malloc(10*sizeof(int));  //10 intlik yer ayırır.
+    int *alan2 = calloc(10,sizeof(int));  //10 intlik yer ayırır.Ramden kalan değerleri temizliyor.
+
+
+
+    printf("   Default gelen degerler\n");
+
+    for(int i=0; i<10 ;i++){
+        printf("alan 1 [%d] = %d \t\t alan2[%d] = %d ", i ,alan1[i] , i, alan2[i] );
+        printf("\n");
+
+    }
+
+
+    for(int k=0;k<10;k++){
+        alan1[k]=3;
+    }
+
+    printf("\n   1.alanimizin degerlerini 3 e esitledik\n");
+     for(int i=0; i<10 ;i++){
+        printf("alan 1 [%d] = %d  ", i ,alan1[i]); //degisiklik yaptik.
+        printf("\n");
+     }
+
+    realloc(alan1,5*sizeof(int));
+    printf("\n");
+
+   printf("\n   Realloc komutundan sonraki degerler");
+     for(int i=0; i<6 ;i++){
+        printf("alan 1 [%d] = %d  ", i ,alan1[i]); //ilk ayrılan yerdeki değerler korunur.
+        printf("\n");
+
+    }
+    free(alan2);
+    free(alan1); //Kullanılan alanları sisteme geri veriyoruz
+    return 0;
+}
