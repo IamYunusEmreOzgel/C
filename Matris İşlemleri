@@ -1,0 +1,98 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+void matrisToplama(int sutunS,int matrisbir[][sutunS],int satirS,int matrisiki[][sutunS]){
+
+
+int MatrislerinToplam[satirS][sutunS];
+int i,j;
+
+for(i=0;i<satirS;i++){
+    for(j=0;j<sutunS;j++){
+        MatrislerinToplam[i][j]=matrisbir[i][j]+matrisiki[i][j];
+    }
+}
+
+for(i=0;i<satirS;i++){
+    for(j=0;j<sutunS;j++){
+        printf("%4d ",MatrislerinToplam[i][j]);
+    }
+    printf("\n");
+}
+}
+void matrisCikartma(int sutunS,int matrisbir[][sutunS],int satirS,int matrisiki[][sutunS]){
+
+int MatrisFarki[satirS][sutunS];
+int i,j;
+
+for(i=0;i<satirS;i++){
+    for(j=0;j<sutunS;j++){
+        MatrisFarki[i][j]=matrisbir[i][j]-matrisiki[i][j];
+    }
+}
+for(i=0;i<satirS;i++){
+    for(j=0;j<sutunS;j++){
+        printf("%4d ",MatrisFarki[i][j]);
+    }
+    printf("\n");
+}
+}
+
+int main()
+{
+    int satirSayisi,sutunSayisi;
+    printf("matrislerin satir Sayisini Giriniz:");
+    scanf("%d",&satirSayisi);
+    printf("matrislerin Sutun Sayisini Giriniz:");
+    scanf("%d",&sutunSayisi);
+  int birinciMatris[satirSayisi][sutunSayisi];
+  int ikincimatris[satirSayisi][sutunSayisi];
+
+  printf("matrislerimiz %d satirli ve %d sutunludur \n",satirSayisi,sutunSayisi);
+  printf("birinci matrisininizi giriniz.. ; \n");
+  for(int i=0;i<satirSayisi;i++){
+    for(int j=0;j<sutunSayisi;j++){
+    printf("[%d][%d]--->",i+1,j+1);
+
+    scanf("%d",&birinciMatris[i][j]);
+    }
+    printf("\n");
+}
+
+  printf("ikinci matrisinizi giriniz.. \n");
+  for(int i=0;i<satirSayisi;i++){
+    for(int j=0;j<sutunSayisi;j++){
+    printf("[%d][%d]--->",i+1,j+1);
+    scanf("%d",&ikincimatris[i][j]);
+    }
+    printf("\n");
+  }
+
+ system("cls");
+ printf("1.matrisiniz\n");
+  for(int i=0;i<satirSayisi;i++){
+    for(int j=0;j<sutunSayisi;j++){
+        printf("%3d ",birinciMatris[i][j]);
+    }
+    printf("\n");
+  }
+printf("\n");
+
+
+  printf("2.matrisiniz\n");
+  for(int i=0;i<satirSayisi;i++){
+    for(int j=0;j<sutunSayisi;j++){
+        printf("%3d ",ikincimatris[i][j]);
+    }
+    printf("\n");
+  }
+printf("\n");
+printf("\n");
+
+  printf("Matrislerin Toplami = \n");
+  matrisToplama(sutunSayisi,birinciMatris,satirSayisi,ikincimatris);
+  printf("Matrislerin Farki = \n");
+  matrisCikartma(sutunSayisi,birinciMatris,satirSayisi,ikincimatris);
+return 0;
+}
