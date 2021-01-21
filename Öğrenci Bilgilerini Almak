@@ -19,7 +19,7 @@ int main()
 
     struct ogrenci ogr[N];
 
-    DOSYA=fopen("C:\\Users\\yeozg\\OneDrive\\Masaüstü\\bilgi.txt","a"); //Bu alana kendi dosya adresinizi giriniz.
+    DOSYA=fopen("bilgi.txt","a"); //Bu alana kendi dosya adresinizi giriniz.
 
     if(DOSYA==NULL){
         printf("dosya olustulamadi");
